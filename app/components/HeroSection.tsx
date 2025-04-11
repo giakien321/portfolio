@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import avatar from '../assest/avatar.png'
-import bg from '../assest/background.png' // import background image
+import bg from '../assest/background.png' 
 
 const container = {
   hidden: { opacity: 0 },
@@ -30,6 +30,7 @@ export default function HeroSection() {
           alt="Background"
           fill
           className="object-cover object-center"
+          priority
         />
       </div>
 
@@ -62,12 +63,10 @@ export default function HeroSection() {
           {/* Tiêu đề lớn */}
           <motion.h1
             className="
-              w-[690px] h-[300px]
-              text-[80px] md:text-[128px]
+              text-[64px] md:text-[128px]
               font-extrabold tracking-tight font-sans
-              leading-[148px]
-              whitespace-nowrap
-              mt-[250px]
+              leading-none
+              mt-20 md:mt-[250px]
             "
             variants={item}
           >
@@ -96,12 +95,16 @@ export default function HeroSection() {
               width={361}
               height={361}
               className="object-cover w-full h-full"
+              priority
             />
           </motion.div>
 
           {/* Mô tả */}
           <motion.p
-            className="text-sm text-[#14130F] max-w-xs font-alt mt-[130px] ml-[200px]"
+            className="
+              text-sm text-[#14130F] max-w-xs
+              mt-10 md:mt-[130px] md:ml-[200px]
+            "
             variants={item}
           >
             Hi, I'm Ngọc Thảo — a graphic designer with a focus on branding and UI/UX.

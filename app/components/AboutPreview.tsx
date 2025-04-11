@@ -24,11 +24,11 @@ export default function AboutPreview() {
       <div className="-mx-4 md:-mx-12">
         {/* Tiêu đề lớn */}
         <motion.div
-          className="w-full max-w-[500px] h-[100px] bg-[#DE7D08] text-white text-[100px] leading-none font-extrabold font-sans lowercase flex items-center justify-center rounded-md shadow-lg"
+          className="w-full max-w-[500px] h-[100px] bg-[#DE7D08] text-white text-[60px] md:text-[100px] leading-none font-extrabold lowercase flex items-center justify-center rounded-md shadow-lg"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ amount: 0.5 }}
+          viewport={{ amount: 0.5, once: true }}
         >
           <span className="pl-40">about.</span>
         </motion.div>
@@ -41,7 +41,7 @@ export default function AboutPreview() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ amount: 0.5 }}
+          viewport={{ amount: 0.5, once: true }}
         >
           <p className="text-base leading-[24px] font-alt mb-12 mt-4">
             I’m currently a third-year student at FPT University, majoring in Graphic Design.
@@ -56,7 +56,7 @@ export default function AboutPreview() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ amount: 0.5 }}
+          viewport={{ amount: 0.5, once: true }}
         >
           <div className="flex flex-col gap-14 pl-10">
 
@@ -124,15 +124,15 @@ export default function AboutPreview() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ amount: 0.5 }}
+            viewport={{ amount: 0.5, once: true }}
           >
             <div className="flex justify-end mt-8">
-              <a
+              <Link
                 href="/about"
                 className="w-[190px] h-[50px] bg-[#DE7D08] text-white rounded-full hover:bg-orange-700 transition shadow-md flex items-center justify-center text-base font-alt text-[20px] hover:scale-105 duration-300"
               >
                 See More
-              </a>
+              </Link>
             </div>
           </motion.div>
         </motion.div>
