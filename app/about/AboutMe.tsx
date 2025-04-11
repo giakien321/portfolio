@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import background from '../assest/background.png';
 import avatar2 from '../assest/avatar2.png';
 import aiIcon from '../assest/ai.png';
@@ -11,7 +11,7 @@ import idIcon from '../assest/id.png';
 import figmaIcon from '../assest/figma.png';
 import { motion } from 'framer-motion';
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, StaticImageData> = {
   ai: aiIcon,
   ps: psIcon,
   ae: aeIcon,
@@ -104,19 +104,19 @@ export default function AboutMe() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: false, amount: 0.4 }}
               >
-                Hi, I'm Ngọc Thảo — a graphic designer specializing in branding and UI/UX.
-                Illustration might not be my strongest skill, but I thrive on creative thinking.
-                I enjoy exploring ideas through the lens of customer psychology and brand values,
-                turning insights into designs that feel both timely and true to each brand.
+                {"Hi, I’m Ngọc Thảo — a graphic designer specializing in branding and UI/UX. "}
+                {"Illustration might not be my strongest skill, but I thrive on creative thinking. "}
+                {"I enjoy exploring ideas through the lens of customer psychology and brand values, "}
+                {"turning insights into designs that feel both timely and true to each brand."}
                 <br /><br />
-                Below is a bit more about me — let’s get to know each other better.
+                {"Below is a bit more about me — let’s get to know each other better."}
               </motion.p>
             </motion.div>
           </div>
         </div>
       </motion.section>
 
-      {/* Education Section */}
+      {/* Education */}
       <div className="mt-24">
         <SectionTitle text="education." />
         <div className="max-w-6xl mx-auto px-6">
@@ -206,7 +206,7 @@ export default function AboutMe() {
         />
       </motion.div>
 
-      {/* Skills */}
+      {/* Technical Skills */}
       <div className="mt-[178px]">
         <WideSectionTitle text="technical skills." />
       </div>
@@ -217,17 +217,14 @@ export default function AboutMe() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        I'm confident using most design tools and often mix and match them depending on the project.
+        I am confident using most design tools and often mix and match them depending on the project.
         This flexible approach helps me speed up the process and push the quality of my work even further.
       </motion.p>
       <motion.div
         className="max-w-6xl mx-auto px-6 mt-10 grid md:grid-cols-3 gap-6"
         initial="hidden"
         whileInView="show"
-        variants={{
-          hidden: {},
-          show: { transition: { staggerChildren: 0.2 } },
-        }}
+        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.2 } } }}
         viewport={{ once: true }}
       >
         <SkillCard title="CODING SKILLS" description="Basic knowledge of:" items={['HTML', 'CSS']} />
@@ -246,10 +243,7 @@ export default function AboutMe() {
         className="max-w-6xl mx-auto px-6 mt-6"
         initial="hidden"
         whileInView="show"
-        variants={{
-          hidden: {},
-          show: { transition: { staggerChildren: 0.2 } },
-        }}
+        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.2 } } }}
         viewport={{ once: true }}
       >
         <ul className="space-y-6">
@@ -336,9 +330,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, description, items, icons 
             }`}
         >
           {items.map((item, i) => (
-            <li key={i} className={item === item.toUpperCase() ? 'font-bold' : ''}>
-              {item}
-            </li>
+            <li key={i}>{item}</li>
           ))}
         </ul>
       )}

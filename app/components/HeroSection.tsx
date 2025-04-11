@@ -60,12 +60,11 @@ export default function HeroSection() {
             View on Behance
           </motion.button>
 
-          {/* Tiêu đề lớn */}
           <motion.h1
             className="
               text-[64px] md:text-[128px]
               font-extrabold tracking-tight font-sans
-              leading-none
+              leading-36
               mt-20 md:mt-[250px]
             "
             variants={item}
@@ -99,7 +98,6 @@ export default function HeroSection() {
             />
           </motion.div>
 
-          {/* Mô tả */}
           <motion.p
             className="
               text-sm text-[#14130F] max-w-xs
@@ -107,7 +105,7 @@ export default function HeroSection() {
             "
             variants={item}
           >
-            Hi, I'm Ngọc Thảo — a graphic designer with a focus on branding and UI/UX.
+            Hi, I&rsquo;m Ngọc Thảo — a graphic designer with a focus on branding and UI/UX.
             My portfolio showcases a wide range of creative work that blends aesthetics
             with functionality to create meaningful, impactful designs.
           </motion.p>
