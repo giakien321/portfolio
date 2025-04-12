@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import avatar from '../assest/avatar.png'
-import bg from '../assest/background.png' 
+import bg from '../assest/background.png'
 
 const container = {
   hidden: { opacity: 0 },
@@ -36,18 +36,18 @@ export default function HeroSection() {
 
       {/* Content */}
       <motion.div
-        className="relative z-10 max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-start"
+        className="relative z-10 max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center md:items-start justify-between"
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ amount: 0.5 }}
       >
         {/* Cột trái */}
-        <motion.div className="flex flex-col" variants={item}>
+        <motion.div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left" variants={item}>
           <motion.button
             className="
-              w-[295px] h-[51px]
-              bg-[#FFA500] text-white
+              w-[230px] h-[44px] md:w-[295px] md:h-[51px]
+              bg-[#DE7D08] text-white
               border border-[#FFA500] rounded-full
               hover:bg-white hover:text-black hover:border-black
               transition-all duration-300 ease-in-out
@@ -62,27 +62,30 @@ export default function HeroSection() {
 
           <motion.h1
             className="
-              text-[64px] md:text-[128px]
-              font-extrabold tracking-tight font-sans
-              leading-36
-              mt-20 md:mt-[250px]
+              font-extrabold tracking-tight font-sans 
+              text-[48px] md:text-[128px] leading-none
+              mt-10 md:mt-[250px]
             "
             variants={item}
           >
-            <span className="block">NGỌC THẢO</span>
-            <span className="block">TRƯƠNG</span>
+            <div className="flex flex-col md:flex-row md:gap-x-4">
+              <span>NGỌC</span>
+              <span>THẢO</span>
+            </div>
+            <div>TRƯƠNG</div>
           </motion.h1>
         </motion.div>
 
         {/* Cột phải */}
         <motion.div
-          className="flex flex-col items-center md:items-end text-center md:text-right"
+          className="w-full md:w-1/2 flex flex-col items-center md:items-end text-center md:text-right mt-12 md:mt-0"
           variants={item}
         >
           {/* Avatar */}
           <motion.div
             className="
-              w-[295px] h-[360px] rounded-xl overflow-hidden mb-8
+              w-[250px] h-[300px] md:w-[295px] md:h-[360px]
+              rounded-xl overflow-hidden mb-6 md:mb-8
               shadow-[8px_8px_0px_0px_rgba(20,19,15,1)]
               transition transform hover:-translate-y-2 hover:shadow-xl duration-300
             "
@@ -100,12 +103,13 @@ export default function HeroSection() {
 
           <motion.p
             className="
-              text-sm text-[#14130F] max-w-xs
-              mt-10 md:mt-[130px] md:ml-[200px]
+              font-[Montserrat] font-normal text-base leading-6
+              text-[#14130F] max-w-xs md:max-w-sm
+              mt-6 md:mt-[35px] md:ml-0
             "
             variants={item}
           >
-            Hi, I&rsquo;m Ngọc Thảo — a graphic designer with a focus on branding and UI/UX.
+            Hi, I am Ngọc Thảo — a graphic designer with a focus on branding and UI/UX.
             My portfolio showcases a wide range of creative work that blends aesthetics
             with functionality to create meaningful, impactful designs.
           </motion.p>
