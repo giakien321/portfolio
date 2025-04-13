@@ -112,7 +112,14 @@ export default function WorkPage() {
                             transition={{ duration: 0.5 }}
                             viewport={{ amount: 0.3 }}
                         >
-                            <img src={`/branding2/story${num}.gif`} alt={`Poroke Story ${num}`} className="w-full h-full object-cover" />
+                            <img
+                                src={`/branding2/story${num}.gif`}
+                                alt={`Poroke Story ${num}`}
+                                loading="lazy"
+                                decoding="async"
+                                className="w-full h-full object-cover rounded-md"
+                            />
+
                         </motion.div>
                     ))}
                 </div>
