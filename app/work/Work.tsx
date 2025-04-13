@@ -144,7 +144,7 @@ export default function WorkPage() {
                             <div className="flex flex-col items-center space-y-2">
                                 <span className="font-alt text-[16px] font-semibold mb-1">Test prototype</span>
                                 <div className="w-[200px] sm:w-[240px] h-[200px] sm:h-[240px] relative">
-                                    <Image src="/ui-ux/prototyperq.png" alt="QR code" fill className="object-contain" />
+                                    <Image src="/ui-ux/prototypeqr.png" alt="QR code" fill className="object-contain" />
                                 </div>
                             </div>
                         </motion.div>
@@ -229,7 +229,7 @@ export default function WorkPage() {
                 >
                     <h3 className="text-[20px] font-alt font-semibold">Project: SIMPLICITY</h3>
                     <p className="text-[16px] font-alt max-w-[800px] leading-relaxed">
-                    This project delves into the creative process of crafting a typozine, a unique publication that merges typography with innovative design. Titled SIMPLICITY, this typozine embodies the essence of minimalism, drawing inspiration from the timeless principles of Bauhaus and Swiss design.
+                        This project delves into the creative process of crafting a typozine, a unique publication that merges typography with innovative design. Titled SIMPLICITY, this typozine embodies the essence of minimalism, drawing inspiration from the timeless principles of Bauhaus and Swiss design.
                     </p>
                 </motion.div>
 
@@ -281,7 +281,6 @@ function UIUXTitle() {
         </motion.h2>
     )
 }
-
 function BrandingImage({
     src,
     alt,
@@ -291,12 +290,15 @@ function BrandingImage({
     alt: string
     className?: string
 }) {
+    const isGif = src.endsWith('.gif')
+
     return (
         <div className="w-full aspect-[4/3] overflow-hidden rounded-md relative">
             <Image
                 src={src}
                 alt={alt}
                 fill
+                unoptimized={isGif}
                 className={`object-cover ${className}`}
                 sizes="(max-width: 768px) 100vw, 33vw"
             />
