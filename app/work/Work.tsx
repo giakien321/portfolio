@@ -197,7 +197,7 @@ export default function WorkPage() {
             <section className="px-4 md:px-10 xl:px-24 mt-12 space-y-6">
                 <div>
                     <p className="font-alt font-semibold text-[20px] mb-2">Animated MV Ly Keo Chai</p>
-                    <p className="font-alt text-[16px] leading-6 max-w-[640px]">The song vividly depicts the life of fishermen, focusing on the tough and exhausting task of casting nets at sea. Despite the relentless hardships they face, these fishermen remain full of energy and optimism. With unshakable resolve, they sing of nature's beauty, the strength of human bonds, and the quiet pride found in a life of honest, hard work.</p>
+                    <p className="font-alt text-[16px] leading-6 max-w-[640px]">The song vividly depicts the life of fishermen, focusing on the tough and exhausting task of casting nets at sea. Despite the relentless hardships they face, these fishermen remain full of energy and optimism. With unshakable resolve, they sing of natural beauty, the strength of human bonds, and the quiet pride found in a life of honest, hard work.</p>
                 </div>
                 <div className="w-full flex justify-center mt-8">
                     <div className="aspect-video w-full max-w-[800px] rounded-lg overflow-hidden shadow-lg">
