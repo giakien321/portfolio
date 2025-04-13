@@ -22,7 +22,7 @@ export default function Navbar() {
     }, [pathname])
 
     return (
-        <nav className="bg-[#14130F] text-white">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-[#14130F] text-white">
             <div className="max-w-6xl mx-auto flex items-center justify-center gap-12 py-4 relative">
                 {navItems.map((item) => {
                     const isActive = activeTab === item.href
@@ -48,5 +48,6 @@ export default function Navbar() {
                 })}
             </div>
         </nav>
+        
     )
 }

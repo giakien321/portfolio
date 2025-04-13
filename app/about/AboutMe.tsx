@@ -53,7 +53,7 @@ export default function AboutMe() {
                 transition={{ duration: 1 }}
                 viewport={{ once: false, amount: 0.4 }}
             >
-                <div className="max-w-6xl mx-auto space-y-16">
+                <div className="max-w-6xl mx-auto space-y-16 pt-24">
                     <div className="grid grid-cols-1 md:grid-cols-[auto_122px_1fr] items-center">
                         <motion.div
                             className="relative w-[420px] h-[500px]"

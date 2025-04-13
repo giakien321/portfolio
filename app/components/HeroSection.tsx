@@ -22,7 +22,7 @@ const item = {
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#FDFCF8] py-12 overflow-hidden">
+    <section className="relative bg-[#FDFCF8] py-12 overflow-hidden pt-30">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -44,21 +44,30 @@ export default function HeroSection() {
       >
         {/* Cột trái */}
         <motion.div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left" variants={item}>
-          <motion.button
-            className="
-              w-[230px] h-[44px] md:w-[295px] md:h-[51px]
-              bg-[#DE7D08] text-white
-              border border-[#FFA500] rounded-full
-              hover:bg-white hover:text-black hover:border-black
-              transition-all duration-300 ease-in-out
-              hover:scale-105 hover:shadow-lg
-              mb-8
-            "
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View on Behance
-          </motion.button>
+          <motion.div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left" variants={item}>
+            <a
+              href="https://www.behance.net/gallery/223474077/Portfolio-2025?fbclid=IwY2xjawJo5U1leHRuA2FlbQIxMAABHuiHqFnaycFh197jef-NGjopi3IIdee5qgJmZF7qxh_56dhXX_nqNXR10dkY_aem_pQ311RGkqwm7AWRYswLoLw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.button
+                className="
+        w-[230px] h-[44px] md:w-[295px] md:h-[51px]
+        bg-[#DE7D08] text-white
+        border border-[#FFA500] rounded-full
+        hover:bg-white hover:text-black hover:border-black
+        transition-all duration-300 ease-in-out
+        hover:scale-105 hover:shadow-lg
+        mb-8
+      "
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View on Behance
+              </motion.button>
+            </a>
+          </motion.div>
+
 
           <motion.h1
             className="
