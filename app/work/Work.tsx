@@ -22,7 +22,7 @@ export default function WorkPage() {
                         >
                             <p className="font-alt font-semibold leading-5 text-[20px] mb-2">Project 1: Tho Dung Coffee</p>
                             <p className="font-alt text-[16px] leading-6">
-                                Minh Dũng Coffee Trading Co., Ltd is a long-standing exporter...
+                                Minh Dũng Coffee Trading Co., Ltd. is a long-standing exporter now focusing on specialty coffee through the Thơ Dũng line. Made from 100% ripe Robusta and Arabica beans and traditionally firewood-roasted, the products offer rich, authentic flavors true to their origins.
                             </p>
                         </motion.div>
                     </div>
@@ -62,7 +62,7 @@ export default function WorkPage() {
                         viewport={{ amount: 0.3 }}
                     >
                         <p className="font-alt font-semibold leading-8 text-[20px] mb-2">Project 2: POROKE</p>
-                        <p className="font-alt text-[16px] leading-6">Poroke is a playful, customizable food brand...</p>
+                        <p className="font-alt text-[16px] leading-6">Poroke is a playful, customizable food brand where customers can build their own perfect bowl. Inspired by the idea that great taste is a superpower, Poroke turns every meal into a fun, flavorful adventure.</p>
                     </motion.div>
                     <motion.div
                         className="col-span-12 md:col-span-6 flex justify-end items-start"
@@ -132,7 +132,7 @@ export default function WorkPage() {
                             viewport={{ amount: 0.3 }}
                         >
                             <p className="font-alt font-semibold text-[20px] mb-2">Project: Tho Dung Coffee Website</p>
-                            <p className="font-alt text-[16px] leading-6 max-w-[520px]">The Thơ Dũng website is designed to promote the brand and showcase its pure, clean coffee products...</p>
+                            <p className="font-alt text-[16px] leading-6 max-w-[520px]">The Thơ Dũng website is designed to promote the brand and showcase its pure, clean coffee products to a wider audience. It supports online sales while also sharing knowledge about the traditional firewood roasting process and the health benefits of coffee, aiming to build a loyal and informed customer community.</p>
                         </motion.div>
                         <motion.div
                             className="col-span-12 md:col-span-5 flex justify-start md:justify-end items-start -mt-10"
@@ -197,7 +197,7 @@ export default function WorkPage() {
             <section className="px-4 md:px-10 xl:px-24 mt-12 space-y-6">
                 <div>
                     <p className="font-alt font-semibold text-[20px] mb-2">Animated MV Ly Keo Chai</p>
-                    <p className="font-alt text-[16px] leading-6 max-w-[640px]">The song vividly depicts the life of fishermen...</p>
+                    <p className="font-alt text-[16px] leading-6 max-w-[640px]">The song vividly depicts the life of fishermen, focusing on the tough and exhausting task of casting nets at sea. Despite the relentless hardships they face, these fishermen remain full of energy and optimism. With unshakable resolve, they sing of nature's beauty, the strength of human bonds, and the quiet pride found in a life of honest, hard work.</p>
                 </div>
                 <div className="w-full flex justify-center mt-8">
                     <div className="aspect-video w-full max-w-[800px] rounded-lg overflow-hidden shadow-lg">
@@ -229,7 +229,7 @@ export default function WorkPage() {
                 >
                     <h3 className="text-[20px] font-alt font-semibold">Project: SIMPLICITY</h3>
                     <p className="text-[16px] font-alt max-w-[800px] leading-relaxed">
-                        This project delves into the creative process of crafting a typozine, a unique publication that merges typography with innovative design. Titled SIMPLICITY, this typozine embodies the essence of minimalism, drawing inspiration from the timeless principles of Bauhaus and Swiss design.
+                    This project delves into the creative process of crafting a typozine, a unique publication that merges typography with innovative design. Titled SIMPLICITY, this typozine embodies the essence of minimalism, drawing inspiration from the timeless principles of Bauhaus and Swiss design.
                     </p>
                 </motion.div>
 
