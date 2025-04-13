@@ -84,7 +84,7 @@ export default function WorkPage() {
                         transition={{ duration: 0.6 }}
                         viewport={{ amount: 0.3 }}
                     >
-                        <BrandingImage src="/branding2/stickerr.gif" alt="Poroke Visual 1" />
+                        <BrandingImage src="/branding2/sticker.gif" alt="Poroke Visual 1" />
                     </motion.div>
                     <div className="flex flex-col gap-4">
                         {["bottle.png", "card.png"].map((file, i) => (
@@ -113,7 +113,7 @@ export default function WorkPage() {
                             viewport={{ amount: 0.3 }}
                         >
                             <img
-                                src={`/branding2/story${num}.gif`}
+                                src={`/branding2/story_${num}.gif`}
                                 alt={`Poroke Story ${num}`}
                                 loading="lazy"
                                 decoding="async"
