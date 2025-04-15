@@ -75,51 +75,21 @@ export default function WorkPage() {
                     </motion.div>
                 </div>
 
-                {/* Poroke Images */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
-                    <motion.div
-                        className="md:col-span-2"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ amount: 0.3 }}
-                    >
-                        <BrandingImage src="/branding2/sticker.gif" alt="Poroke Visual 1" />
-                    </motion.div>
-                    <div className="flex flex-col gap-4">
-                        {["bottle.png", "card.png"].map((file, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ amount: 0.2 }}
-                            >
-                                <BrandingImage src={`/branding2/${file}`} alt={`Poroke Visual ${i + 2}`} />
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* GIF Stories */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
-                    {["1", "2", "3"].map(num => (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+                    {["bottle.png", "card.png"].map((file, i) => (
                         <motion.div
-                            key={num}
-                            className="w-full aspect-[9/16] rounded-lg overflow-hidden shadow-md"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            key={i}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5 }}
-                            viewport={{ amount: 0.3 }}
+                            viewport={{ amount: 0.2 }}
+                            className="w-full h-full"
                         >
-                            <img
-                                src={`/branding2/story_${num}.gif`}
-                                alt={`Poroke Story ${num}`}
-                                loading="lazy"
-                                decoding="async"
-                                className="w-full h-full object-cover rounded-md"
+                            <BrandingImage
+                                src={`/branding2/${file}`}
+                                alt={`Poroke Visual ${i + 2}`}
+                                className="w-full h-auto object-cover"
                             />
-
                         </motion.div>
                     ))}
                 </div>
