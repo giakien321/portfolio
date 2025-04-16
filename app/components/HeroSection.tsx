@@ -81,7 +81,7 @@ export default function HeroSection() {
               <span>NGỌC</span>
               <span>THẢO</span>
             </div>
-            <div>TRƯƠNG</div>
+            <div className="mt-5">TRƯƠNG</div>
           </motion.h1>
         </motion.div>
 

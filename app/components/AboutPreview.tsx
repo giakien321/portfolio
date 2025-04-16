@@ -20,11 +20,11 @@ const item = {
 
 export default function AboutPreview() {
   return (
-    <section className="bg-gradient-to-b from-[#FDFCF8] to-[#FCF9F2] py-20 md:py-24 px-4 md:px-12 text-[#14130F] font-sans">
+    <section className="bg-gradient-to-b from-[#ffffff] to-[#ffffff] py-20 md:py-24 px-4 md:px-12 text-[#14130F] font-sans">
       <div className="overflow-x-auto -mx-4 md:-mx-12">
         {/* Tiêu đề lớn */}
         <motion.div
-          className="w-full max-w-[500px] h-[100px] bg-[#DE7D08] text-white text-[clamp(40px,8vw,100px)] leading-none font-extrabold font-sans lowercase flex items-center justify-center rounded-md shadow-lg"
+          className="w-full max-w-[500px] h-[120px] bg-[#DE7D08] text-white text-[clamp(40px,8vw,100px)] leading-none font-extrabold font-sans lowercase flex items-center justify-center rounded-md shadow-lg"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}

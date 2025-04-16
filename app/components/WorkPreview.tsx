@@ -3,19 +3,24 @@
 import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 const projects = [
-  { title: 'Brand Identity', image: '/projects/brand-identity.jpg' },
-  { title: 'UX/UI', image: '/projects/ux-ui.jpg' },
-  { title: 'Poster', image: '/projects/poster.jpg' },
-  { title: 'Motion Graphics', image: '/projects/packaging.jpg' },
-  { title: 'Typozine', image: '/projects/website.jpg' },
-]
+  { title: 'Brand Identity', image: '/BB2.png', anchor: 'branding' },
+  { title: 'UX/UI', image: '/ui_ux.jpg', anchor: 'uiux' },
+  { title: 'Poster', image: '/poster.jpg', anchor: 'poster' },
+  { title: 'Motion Graphics', image: '/motiongraphic.jpg', anchor: 'motion' },
+  { title: 'Typozine', image: '/typozine.jpg', anchor: 'typozine' },
+];
 
 export default function WorkPreview() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
+  const router = useRouter()
+
+  const handleClick = (anchor: string) => {
+    router.push(`/work#${anchor}`)
+  }
 
   // Auto-scroll
   useEffect(() => {
@@ -90,7 +95,7 @@ export default function WorkPreview() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <div className="w-full max-w-[500px] h-[100px] bg-[#DE7D08] text-white text-[100px] leading-none font-extrabold font-sans lowercase flex items-center justify-center rounded-md shadow-lg">
+        <div className="w-full max-w-[500px] h-[120px] bg-[#DE7D08] text-white text-[100px] leading-none font-extrabold font-sans lowercase flex items-center justify-center rounded-md shadow-lg">
           <span className="pl-40">work.</span>
         </div>
       </motion.div>
@@ -116,20 +121,29 @@ export default function WorkPreview() {
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
-            className="relative scroll-snap-align-start w-[500px] h-[400px] flex-shrink-0 rounded-2xl overflow-hidden group shadow-lg"
+            onClick={() => handleClick(project.anchor)}
+            className="relative scroll-snap-align-start w-[500px] h-[400px] flex-shrink-0 rounded-2xl overflow-hidden group shadow-lg hover:cursor-pointer"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: index * 0.15 }}
             viewport={{ once: true }}
           >
+            {/* Image */}
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover transition duration-700 ease-in-out group-hover:opacity-30 will-change-opacity"
+              className="object-cover transition duration-700 ease-in-out group-hover:opacity-10"
             />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out">
-              <h3 className="text-white text-2xl font-semibold">{project.title}</h3>
+
+            {/* Dark overlay when hovered */}
+            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition duration-700 ease-in-out z-10" />
+
+            {/* Text */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out z-20">
+              <h3 className="text-white text-4xl font-bold drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] tracking-wide">
+                {project.title}
+              </h3>
             </div>
           </motion.div>
         ))}

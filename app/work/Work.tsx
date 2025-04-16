@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export default function WorkPage() {
     return (
@@ -232,27 +233,44 @@ export default function WorkPage() {
 // --------------------- COMPONENTS ---------------------
 
 function BrandingTitle() {
+    const [showNow, setShowNow] = useState(false)
+
+    useEffect(() => {
+        if (window.location.hash === '#branding') {
+            setShowNow(true)
+        }
+    }, [])
+
     return (
         <motion.h2
+            id="branding"
             className="w-[700px] h-[130px] bg-[#DE7D08] text-white text-[100px] leading-[1] font-extrabold font-sans lowercase flex items-center rounded-md shadow-lg mb-6 pl-20"
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={showNow ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ amount: 0.5 }}
         >
             <span className="pl-20">branding<span className="text-white">.</span></span>
         </motion.h2>
     )
 }
 
+
 function UIUXTitle() {
+    const [showNow, setShowNow] = useState(false)
+
+    useEffect(() => {
+        if (window.location.hash === '#uiux') {
+            setShowNow(true)
+        }
+    }, [])
+
     return (
         <motion.h2
+            id="uiux"
             className="w-[600px] h-[130px] bg-[#DE7D08] text-white text-[100px] leading-[1] font-extrabold font-sans lowercase flex items-center rounded-md shadow-lg mb-6 pl-20"
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={showNow ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ amount: 0.5 }}
         >
             <span className="pl-50">ui/<span className="text-white">ux.</span></span>
         </motion.h2>
@@ -283,13 +301,21 @@ function BrandingImage({
     )
 }
 function PosterTitle() {
+    const [showNow, setShowNow] = useState(false)
+
+    useEffect(() => {
+        if (window.location.hash === '#poster') {
+            setShowNow(true)
+        }
+    }, [])
+
     return (
         <motion.div
+            id="poster"
             className="w-fit space-y-2"
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={showNow ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ amount: 0.5 }}
         >
             <h2 className="w-[600px] h-[150px] bg-[#DE7D08] text-white text-[100px] leading-[1] font-extrabold font-sans lowercase flex items-center rounded-md shadow-lg mb-2 pl-20">
                 <span className="pl-30">poster<span className="text-white">.</span></span>
@@ -324,31 +350,50 @@ function PosterImage({
     )
 }
 function MotionGraphicTitle() {
+    const [showNow, setShowNow] = useState(false)
+
+    useEffect(() => {
+        if (window.location.hash === '#motion') {
+            setShowNow(true)
+        }
+    }, [])
+
     return (
         <motion.h2
+            id="motion"
             className="w-[1000px] h-[130px] bg-[#DE7D08] text-white text-[100px] leading-[1] font-extrabold font-sans lowercase flex items-center rounded-md shadow-lg mb-6 pl-20"
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={showNow ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ amount: 0.5 }}
         >
             <span className="whitespace-nowrap pl-20">motion graphic<span className="text-white">.</span></span>
         </motion.h2>
     )
 }
+
 function TypozineTitle() {
+    const [showNow, setShowNow] = useState(false)
+
+    useEffect(() => {
+        if (window.location.hash === '#typozine') {
+            setShowNow(true)
+        }
+    }, [])
+
     return (
         <motion.h2
+            id="typozine"
             className="w-[700px] h-[140px] bg-[#DE7D08] text-white text-[100px] leading-[1] font-extrabold font-sans lowercase flex items-center rounded-md shadow-lg mb-6 pl-20"
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={showNow ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ amount: 0.5 }}
         >
             <span className="pl-20">typozine<span className="text-white">.</span></span>
         </motion.h2>
     )
 }
+
+
 
 
 
